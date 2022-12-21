@@ -1,0 +1,36 @@
+{
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "skuba build",
+    "deploy": "cdk deploy appStack --require-approval never --context stage=${ENVIRONMENT}",
+    "format": "skuba format",
+    "lint": "skuba lint",
+    "package": "yarn install --ignore-optional --ignore-scripts --modules-folder ./lib/node_modules --non-interactive --offline --production",
+    "test": "skuba test",
+    "test:ci": "skuba test --coverage",
+    "test:watch": "skuba test --watch"
+  },
+  "dependencies": {
+    "@seek/logger": "^5.0.1",
+    "zod": "^3.19.1"
+  },
+  "devDependencies": {
+    "@aws-cdk/assert": "^2.24.0",
+    "@types/aws-lambda": "^8.10.82",
+    "@types/node": "16.11.64",
+    "aws-cdk": "^2.24.0",
+    "aws-cdk-lib": "^2.24.0",
+    "constructs": "^10.0.17",
+    "skuba": "5.0.1"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "skuba": {
+    "entryPoint": "src/app.ts#handler",
+    "template": "lambda-sqs-worker-cdk",
+    "type": "application",
+    "version": "5.0.1"
+  }
+}
