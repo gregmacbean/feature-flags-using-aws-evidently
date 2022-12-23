@@ -1,6 +1,6 @@
 export default {
   credentials: {
-    accessKeyId: "{insert your accessKyID here}",
+    accessKeyId: "{insert your accessKeyID here}",
     secretAccessKey: "{insert your secretAccessKey here}",
   },
 };
