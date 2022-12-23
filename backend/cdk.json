@@ -2,7 +2,7 @@
   "app": "npx ts-node infra/index.ts",
   "context": {
     "global": {
-      "appName": "hirer-analytics-feature-flags"
+      "appName": "feature-flags"
     },
     "dev": {
       "workerLambda": {
